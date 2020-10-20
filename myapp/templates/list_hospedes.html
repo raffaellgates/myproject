@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Hospedes</title>
+    </head>
+    <body>
+        <h1>Hospedes Cadastrados</h1>
+
+        {%for hospede in hospedes %}
+            <h3>Nome: {{hospede.nome}}</h3>
+            <p>Cpf: {{hospede.cpf}}</p>
+        {% endfor %}
+
+        <a href="{% url 'add_hospede' %}">Adicionar hospede</a>
+    </form>
+    </body>
+</html>

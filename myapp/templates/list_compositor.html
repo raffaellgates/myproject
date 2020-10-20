@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Compositores</title>
+    </head>
+    <body>
+        <h1>Compositores Cadastrados</h1>
+
+        {%for compositor in compositores %}
+            <h3>Nome: {{compositor.nome}}</h3>
+            <p>Data de Nascimento: {{compositor.data_nasc}}</p>
+        {% endfor %}
+
+        <a href="{% url 'add_compositor' %}">Adicionar compositor</a>
+    </form>
+    </body>
+</html>

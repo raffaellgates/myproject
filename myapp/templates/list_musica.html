@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Musicas</title>
+    </head>
+    <body>
+        <h1>Musicas Cadastrados</h1>
+
+        {%for musica in musicas %}
+            <h3>Nome: {{musica.nome}}</h3>
+            <p>Letra: {{musica.letra}}</p>
+            <p>Data: {{musica.data}}</p>
+            <p>Compositores: {{musica.compositores}}</p>
+        {% endfor %}
+
+        <a href="{% url 'add_musica' %}">Adicionar musica</a>
+    </form>
+    </body>
+</html>
