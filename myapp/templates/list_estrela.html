@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Estrelas</title>
+    </head>
+    <body>
+        <h1>Estrelas Cadastrados</h1>
+
+        {%for estrela in estrelas %}
+            <h3>Nome: {{estrela.nome}}</h3>
+            <p>tamanho: {{estrela.tamanho}}</p>
+        {% endfor %}
+
+        <a href="{% url 'add_estrela' %}">Adicionar estrela</a>
+    </form>
+    </body>
+</html>

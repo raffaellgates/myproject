@@ -1,7 +1,7 @@
-from django.forms import ModelForm
 from django import forms
+from django.forms import ModelForm
 
-from myapp.models import Hospede, Compositor, Musica
+from myapp.models import Compositor, Constelacao, Estrela, Hospede, Musica
 
 
 class HospedeForm(ModelForm):
@@ -34,3 +34,15 @@ class MusicaForm(ModelForm):
 					}
 			)
 		}
+
+
+class EstrelaForm(ModelForm):
+	class Meta:
+		model = Estrela
+		fields = '__all__'
+
+	
+class ConstelacaoForm(ModelForm):
+	class Meta:
+		model = Constelacao
+		fields = '__all__'

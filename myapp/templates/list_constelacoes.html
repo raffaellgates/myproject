@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Constelações</title>
+    </head>
+    <body>
+        <h1>Constelações Cadastrados</h1>
+
+        {%for constelacao in constelacoes %}
+            <h3>Nome: {{constelacao.nome}}</h3>
+            <p>Descrição: {{constelacao.descricao}}</p>
+            <p>Composto por Estrelas: {{constelacao.estrelas}}</p>
+        {% endfor %}
+
+        <a href="{% url 'add_constelacao' %}">Adicionar Constelação</a>
+    </form>
+    </body>
+</html>

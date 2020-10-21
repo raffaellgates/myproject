@@ -21,7 +21,26 @@ class Musica(models.Model):
     nome = models.CharField(max_length=100)
     data = models.DateField()
     letra = models.TextField()
-    compositores = models.ManyToManyField(Compositor, related_name='compositor')
+    compositores = models.ManyToManyField(
+        Compositor, related_name='compositor')
+
+    def __str__(self):
+        return self.nome
+
+
+class Estrela(models.Model):
+    nome = models.CharField(max_length=50)
+    tamanho = models.CharField(max_length=20)
+
+    def __str__(self):
+        return self.nome
+
+
+class Constelacao(models.Model):
+    nome = models.CharField(max_length=30)
+    descricao = models.TextField()
+    estrelas = models.ForeignKey(
+        Estrela, related_name='contelacao', on_delete=models.CASCADE)
 
     def __str__(self):
         return self.nome
